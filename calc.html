@@ -1,0 +1,41 @@
+<html>
+    <title> Anna's Calculator</title>
+    <head>
+        
+    </head>
+    <body>
+        <div>
+           <input id="x"/> + <input id="y"/> <button onClick="calcAdditionAction();"> = </button> <input id="c"/> 
+       </div>
+           <hr/>
+       <div>
+           <input id="a"/> * <input id="b"/> <button onClick="calcMultiplyAction();"> =</button> <input id="d"/>
+       </div>
+           <script>
+               function calcAdditionAction() {
+                   // alert('error, this number sentence is too difficult, please try again');
+                   var xString = document.getElementById('x').value;
+                   var yString = document.getElementById('y').value;
+                   var x = parseFloat(xString);
+                   var y = parseFloat(yString);
+                   var c = x + y;
+                   document.getElementById('c').value = c;
+                   console.log('x='+x);
+                   console.log('y='+y);
+               }
+               
+               function calcMultiplyAction() {
+                   // alert('error, this number sentence is too difficult, please try again');
+                   var aString = document.getElementById('a').value;
+                   var bString = document.getElementById('b').value;
+                   var a = parseFloat(aString);
+                   var b = parseFloat(bString);
+                   var d = a * b;
+                   document.getElementById('d').value = d;
+                   console.log('a='+a);
+                   console.log('b='+b);
+               }
+               
+           </script>
+    </body>
+</html>
