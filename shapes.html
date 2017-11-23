@@ -1,5 +1,33 @@
 <html>
     <body>
-        shapes
+        <div>
+            shapes
+        </div>
+        
+        <canvas id="myCanvas" width="640" height="480"></canvas>
+        <script>
+            var myCanvas = document.getElementById('myCanvas');
+            var ctx = myCanvas.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(10,10);
+            ctx.lineTo(100,10);
+            ctx.lineTo(100,50);
+            ctx.lineTo(10,50);
+            ctx.lineTo(10,10);
+            ctx.fillStyle = 'yellow';
+            ctx.strokeStyle = 'blue';
+            ctx.stroke();
+            ctx.fill();
+            ctx.closePath();
+
+            ctx.fillStyle = 'rgba(0,128,0,0.5)';
+            ctx.fillRect(30, 30, 50, 50);
+
+            ctx.beginPath();
+            ctx.fillStyle = 'lavender';
+            ctx.arc(200,200, 100, 0, Math.PI * 2)
+            ctx.fill();
+            ctx.beginPath();
+        </script>
     </body>
 </html>
